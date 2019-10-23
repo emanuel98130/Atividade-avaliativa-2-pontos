@@ -74,3 +74,50 @@ void main(){
   c1.fabricado();
   c1.tipo_marca();
 }
+
+
+
+
+
+/// Atividade da prova:
+
+class Banco{
+  double depositoO;
+  double saqueE;
+  double saldoO = 0;
+  
+  
+  double deposito(double valor){
+    saldoO = saldoO + valor;
+    print('Deposito efetuado!');
+    print('Saldo atual na conta: $saldoO');
+  }
+  
+  double saque(double valor){
+    if(valor > saldoO){
+    print('Saque não diponivel');
+    print('Saldo atual na conta: $saldoO');
+    }
+    else{
+    saldoO = saldoO - valor;
+    print('saque efetuado!');
+    print('Saldo atual na conta: $saldoO');
+    }
+  }
+  void tranferencia (int contaA, double valor){
+    if(valor > saldoO){
+    print('Transferência não diponivel');
+    print('Saldo atual na conta: $saldoO');
+    }
+    else{
+    saldoO = saldoO - valor;
+    print('Valor transferido da conta 1234 para a conta $contaA no valor de $valor.');
+    print('Saldo atual na conta: $saldoO');
+     }
+  }
+}
+
+
+void main() {
+ Banco c1 = Banco();
+}
